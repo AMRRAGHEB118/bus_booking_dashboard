@@ -23,12 +23,12 @@ export class Traveler {
     @Column({ unique: true })
     userId: string;
 
-    @Column({ unique: true, readonly: true })
+    @Column({ unique: true })
     get username(): string {
         return this.user?.username;
     }
 
-    @Column({ unique: true, readonly: true })
+    @Column({ unique: true })
     get email(): string {
         return this.user?.email;
     }

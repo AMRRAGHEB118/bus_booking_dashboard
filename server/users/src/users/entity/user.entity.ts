@@ -3,6 +3,7 @@ import {
     PrimaryGeneratedColumn,
     Column,
     CreateDateColumn,
+    UpdateDateColumn,
 } from 'typeorm';
 
 export enum UserRole {
@@ -33,6 +34,6 @@ export class User {
     @CreateDateColumn({ readonly: true, select: false })
     createdAt: Date;
 
-    @CreateDateColumn({ select: false })
+    @UpdateDateColumn({ select: false })
     updatedAt: Date;
 }
